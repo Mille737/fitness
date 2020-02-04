@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class CollectionOfLists {
 
@@ -49,7 +50,7 @@ public class CollectionOfLists {
     }
 
     // list of all people related to the fitness center, employees and members
-    public static void getAllFitnessPeople() {
+    public static String getAllFitnessPeople() {
 
         ArrayList<Person> allFitnessPeople = new ArrayList<>();
 
@@ -59,6 +60,11 @@ public class CollectionOfLists {
         allFitnessPeople.add(new Person("Thea", "0202962134"));
         allFitnessPeople.add(new Person("Andreas", "8875021995"));
 
-        System.out.println("Name        CPR" + '\n' + allFitnessPeople);
+        String list = Arrays.toString(allFitnessPeople.toArray()).replace(", *", "*").replace(", *", "*");
+
+        System.out.println("Name        CPR");
+
+        return list.substring(1,list.length()-1);
     }
+
 }

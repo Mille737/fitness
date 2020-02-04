@@ -22,4 +22,5 @@ public class Person /*super class for all types of people*/ {
                 name + ',' + ' ' +
                 cpr + '\n';
     }
+
 }
