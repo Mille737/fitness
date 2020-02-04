@@ -3,9 +3,6 @@ public class Person /*super class for all types of people*/ {
     private String name;
     private String cpr;
 
-    public Person() {
-    }
-
     public Person(String name, String cpr) {
         this.name = name;
         this.cpr = cpr;
@@ -15,16 +12,14 @@ public class Person /*super class for all types of people*/ {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getCpr() {
         return cpr;
     }
 
-    public void setCpr(String cpr) {
-        this.cpr = cpr;
+    @Override
+    public String toString() {
+        return "*******************" + '\n' +
+                name + ',' + ' ' +
+                cpr + '\n';
     }
-
 }

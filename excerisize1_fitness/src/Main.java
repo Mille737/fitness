@@ -1,6 +1,12 @@
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+
+        CollectionOfLists.getAllFitnessPeople();
+        System.out.println("================================");
+        CollectionOfLists.getAllFitnessMembers();
+        System.out.println("================================");
+        CollectionOfLists.getAllEmployees();
     }
+
 }

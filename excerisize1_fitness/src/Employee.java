@@ -1,35 +1,35 @@
-public class Employee extends Person /* super class for the two types of employees */ {
+public class Employee extends Person{
 
     private int hours;
     private int salary;
+    private int vacation;
 
-    public Employee() {
-    }
 
-    public Employee(int hours, int salary) {
-        this.hours = hours;
-        this.salary = salary;
-    }
-
-    public Employee(String name, String cpr, int hours, int salary) {
+    public Employee(String name, String cpr, int hours) {
         super(name, cpr);
+
         this.hours = hours;
-        this.salary = salary;
+        this.salary = 456 * hours;
+    }
+
+
+    public Employee(String name, String cpr) {
+        super(name, cpr);
+        this.hours = 37;
     }
 
     public int getHours() {
+
         return hours;
     }
 
-    public void setHours(int hours) {
-        this.hours = hours;
-    }
-
     public int getSalary() {
+
         return salary;
     }
 
-    public void setSalary(int salary) {
-        this.salary = salary;
+    public int getVacation() {
+
+        return vacation;
     }
 }
